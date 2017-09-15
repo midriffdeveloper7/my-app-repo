@@ -48,7 +48,6 @@ if($hmac === $calculated_hmac){
 
 	$data = json_decode($response->getBody()->getContents(), true);
 	$access_token = $data['access_token'];
-	echo $access_token;
 	
 
 	$nonce = $query['state'];

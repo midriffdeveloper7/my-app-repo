@@ -8,7 +8,7 @@ $dotenv->load();
 
 $db = new Mysqli(getenv('MYSQL_HOST'), getenv('MYSQL_USER'), getenv('MYSQL_PASS'), getenv('MYSQL_DB')); 
 
-$store = 'customboxes1.myshopify.com'; 
+$store = 'test-shop.myshopify.com'; 
 $select = $db->query("SELECT access_token FROM installs WHERE store = '$store'");
 $user = $select->fetch_object();
 $access_token = $user->access_token;
